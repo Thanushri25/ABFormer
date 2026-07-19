@@ -16,8 +16,8 @@ node_modules/
 # Model weights
 AntiBinder_Weights.pth
 
-# Database
-abformer.db
+# Generated database
+backend/abformer.db
 
 # Generated heatmaps
-heatmap_*.png
+backend/heatmap_*.png
