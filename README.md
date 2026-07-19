@@ -217,37 +217,45 @@ The application provides:
 
 ---
 
-# 📷 Application Screenshots
+# 📷 Application Preview
 
-> Add your screenshots inside **docs/images/** and update the filenames below.
+## 🏠 Home Page
 
-## Home Page
-
-![Home](docs/images/home.png)
-
----
-
-## Prediction Page
-
-![Prediction](docs/images/prediction.png)
+<p align="center">
+  <img src="docs/images/home.png" width="900">
+</p>
 
 ---
 
-## Results
+## 🔬 Prediction Interface
 
-![Results](docs/images/results.png)
-
----
-
-## Workflow
-
-![Workflow](docs/images/workflow.png)
+<p align="center">
+  <img src="docs/images/prediction.png" width="900">
+</p>
 
 ---
 
-## Model Architecture
+## 📊 Prediction Results
 
-![Architecture](docs/images/architecture.png)
+<p align="center">
+  <img src="docs/images/results.png" width="900">
+</p>
+
+---
+
+## 🧬 Workflow
+
+<p align="center">
+  <img src="docs/images/workflow.png" width="900">
+</p>
+
+---
+
+## 🏗️ Model Architecture
+
+<p align="center">
+  <img src="docs/images/architecture.png" width="900">
+</p>
 
 ---
 
