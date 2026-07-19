@@ -2,53 +2,83 @@
 
 # 🧬 ABFormer
 
-### Multimodal Deep Learning Framework for Antibody-Drug Conjugate (ADC) Prediction
+### Multimodal Deep Learning Framework for Antibody–Drug Conjugate (ADC) Prediction
 
-AI-powered framework that combines protein language models, structural embeddings, and molecular descriptors to predict Antibody-Drug Conjugate performance.
+A web-based deep learning framework that integrates protein language models, structural embeddings, and molecular descriptors to predict ADC binding performance.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688)
 ![React](https://img.shields.io/badge/React-Frontend-61DAFB)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red)
-![Vite](https://img.shields.io/badge/Vite-Frontend-purple)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-EE4C2C)
+![Vite](https://img.shields.io/badge/Vite-BuildTool-646CFF)
 
 </div>
 
 ---
 
-# Overview
+# 📖 Overview
 
-ABFormer is a multimodal Artificial Intelligence framework developed for predicting the binding performance of Antibody-Drug Conjugates (ADCs).
+Antibody–Drug Conjugates (ADCs) are targeted cancer therapies that combine monoclonal antibodies with cytotoxic drugs to selectively attack cancer cells.
 
-Instead of relying on a single data source, ABFormer combines
+**ABFormer** is a multimodal deep learning framework that combines biological and chemical information to predict ADC binding performance through an interactive web application.
 
-- Protein sequence embeddings
-- Protein structural embeddings
-- Molecular fingerprints
+The framework integrates multiple data modalities, including:
+
+- Antibody sequence embeddings
+- Antigen sequence embeddings
+- Structural representations
 - Amino Acid Composition (AAC)
-- MACCS fingerprints
+- MACCS molecular fingerprints
 - Drug-to-Antibody Ratio (DAR)
 
-using transformer-based attention mechanisms.
-
-The system provides an intuitive web interface that allows users to submit antibody and antigen sequences together with payload information and obtain prediction results.
+These features are fused using transformer-based attention mechanisms to improve prediction performance.
 
 ---
 
-# Features
+# ✨ Features
 
-- AI-powered ADC prediction
-- Transformer-based multimodal fusion
-- FastAPI backend
+- Web-based ADC prediction interface
+- FastAPI backend for inference
 - React + Vite frontend
+- Transformer-based multimodal feature fusion
 - Prediction history
 - Heatmap visualization
-- Interactive web interface
-- Research-oriented architecture
+- Interactive user interface
 
 ---
 
-# Tech Stack
+# 🏗️ Project Structure
+
+```text
+ABFormer/
+│
+├── backend/
+│   ├── AntiBinder/
+│   ├── Ablation/
+│   ├── Embeddings/
+│   ├── ckpts/
+│   ├── data/
+│   ├── routes/
+│   ├── app.py
+│   ├── inference.py
+│   ├── model.py
+│   ├── train.py
+│   └── README.md
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── README.md
+│
+├── .gitignore
+└── README.md
+```
+
+---
+
+# ⚙️ Technology Stack
 
 ## Backend
 
@@ -70,78 +100,53 @@ The system provides an intuitive web interface that allows users to submit antib
 
 - ESM-2
 - IgFold
-- AntiBinder
 - FG-BERT
-- Cross Attention
-- Transformer Networks
+- AntiBinder
+- Cross Attention Networks
+- Transformer Architecture
 
 ---
 
-# Project Structure
-
-```text
-ABFormer
-│
-├── backend
-│   ├── app.py
-│   ├── inference.py
-│   ├── train.py
-│   ├── model.py
-│   ├── routes
-│   ├── AntiBinder
-│   ├── Embeddings
-│   ├── data
-│   └── README.md
-│
-├── frontend
-│   ├── src
-│   ├── public
-│   ├── package.json
-│   └── README.md
-│
-├── README.md
-└── .gitignore
-```
-
----
-
-# Model Workflow
+# 🔬 Model Workflow
 
 ```text
 User Input
-      │
-      ▼
+    │
+    ▼
 Heavy Chain
 Light Chain
 Antigen Sequence
-Payload
-Linker
-DAR
-      │
-      ▼
+Payload SMILES
+Linker SMILES
+Drug-to-Antibody Ratio (DAR)
+    │
+    ▼
 Feature Extraction
-      │
-      ├── ESM-2 Embeddings
-      ├── IgFold Structure
-      ├── AAC Features
-      ├── MACCS Fingerprints
-      └── Chemical Embeddings
-      │
-      ▼
-ABFormer Multimodal Fusion
-      │
-      ▼
-Prediction Layer
-      │
-      ▼
-ADC Binding Prediction
+    │
+    ├── Protein Language Embeddings (ESM-2)
+    ├── Structural Embeddings (IgFold)
+    ├── Amino Acid Composition (AAC)
+    ├── MACCS Fingerprints
+    └── Chemical Features
+    │
+    ▼
+Multimodal Feature Fusion
+    │
+    ▼
+ABFormer Prediction Model
+    │
+    ▼
+Binding Prediction
+    │
+    ▼
+Prediction Score + Heatmap
 ```
 
 ---
 
-# Running the Project
+# 🚀 Getting Started
 
-## Clone Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/Thanushri25/ABFormer.git
@@ -150,7 +155,7 @@ cd ABFormer
 
 ---
 
-## Backend
+## Backend Setup
 
 ```bash
 cd backend
@@ -162,7 +167,7 @@ conda activate ABFormer
 python -m uvicorn app:app --reload
 ```
 
-Backend
+Backend will run at:
 
 ```
 http://127.0.0.1:8000
@@ -170,7 +175,7 @@ http://127.0.0.1:8000
 
 ---
 
-## Frontend
+## Frontend Setup
 
 ```bash
 cd frontend
@@ -180,7 +185,7 @@ npm install
 npm run dev
 ```
 
-Frontend
+Frontend will run at:
 
 ```
 http://localhost:5173
@@ -188,9 +193,9 @@ http://localhost:5173
 
 ---
 
-# Input
+# 📝 Input Parameters
 
-The prediction API accepts
+The prediction interface accepts:
 
 - Heavy Chain Sequence
 - Light Chain Sequence
@@ -201,58 +206,80 @@ The prediction API accepts
 
 ---
 
-# Output
+# 📊 Output
 
-The system generates
+The application provides:
 
 - Predicted ADC Score
-- Confidence Score
-- Heatmap Visualization
+- Prediction Confidence
+- Attention Heatmap
 - Prediction History
 
 ---
 
-# Architecture
+# 📷 Application Screenshots
 
-Replace these placeholders with your images.
+> Add your screenshots inside **docs/images/** and update the filenames below.
 
-```markdown
-![Workflow](frontend/src/assets/workflow.png)
+## Home Page
 
-![Architecture](frontend/src/assets/architecture.png)
-
-![Results](frontend/src/assets/results.png)
-```
+![Home](docs/images/home.png)
 
 ---
 
-# Future Improvements
+## Prediction Page
 
-- Docker support
+![Prediction](docs/images/prediction.png)
+
+---
+
+## Results
+
+![Results](docs/images/results.png)
+
+---
+
+## Workflow
+
+![Workflow](docs/images/workflow.png)
+
+---
+
+## Model Architecture
+
+![Architecture](docs/images/architecture.png)
+
+---
+
+# 📂 Repository
+
+| Folder                | Description                                              |
+| --------------------- | -------------------------------------------------------- |
+| `backend/`            | FastAPI backend, model inference, APIs, training scripts |
+| `frontend/`           | React web application                                    |
+| `backend/Embeddings/` | Precomputed embedding files                              |
+| `backend/routes/`     | API endpoints                                            |
+| `backend/data/`       | Dataset files                                            |
+
+---
+
+# 🔮 Future Improvements
+
+- Docker containerization
 - Cloud deployment
-- Batch inference
-- Explainable AI
 - User authentication
-- Model retraining pipeline
+- Batch inference support
+- Explainable AI visualizations
+- Automated model retraining
 
 ---
 
-# Repository
+# 👥 Authors
 
-```
-backend/
-```
-
-Contains all AI models, APIs and inference pipeline.
-
-```
-frontend/
-```
-
-Contains the React web application.
+Developed as part of an academic project on **multimodal deep learning for Antibody–Drug Conjugate (ADC) prediction**.
 
 ---
 
-# Acknowledgements
+# 📄 License
 
-This project was developed as part of an academic research initiative focused on multimodal deep learning for Antibody-Drug Conjugate prediction.
+This project is intended for academic and research purposes.
