@@ -1,0 +1,2 @@
+epoch,train_loss,train_acc,train_auc,train_prauc,val_loss,val_acc,val_auc,val_prauc,val_sens,val_spec,learning_rate,status
+0,1.239683,0.6472,0.5794,0.6969,0.261278,0.6190,0.9213,0.9423,0.3333,1.0000,1.00e-04,BEST
